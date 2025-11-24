@@ -36,6 +36,7 @@ export async function PUT(
     });
     return NextResponse.json(updated);
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: "Gagal update" }, { status: 500 });
   }
 }
